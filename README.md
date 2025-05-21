@@ -38,3 +38,16 @@ INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('5','
 INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('6','Smith','Murphy','1');
 INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('7','Thomas ','O'Connor','1');
 INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('8','Lam','Williams','4');
+
+3.Join Table 1: department with Table 2: employee using a LEFT JOIN. Use data from the department table as the primary source, 
+and SELECT the specified fields. Use CONCAT to combine firstname and lastname into a single column.
+Code
+SELECT 
+    employee_id,
+    CONCAT(firstname, ' ', lastname) As employee_title,
+    department_name
+FROM department 
+LEFT JOIN employee
+ON employee.department_id = department.department_id;
+
+Note : This PHP code connects to a database, performs a SQL query, converts the retrieved data into JSON format, and outputs the result using echo.
