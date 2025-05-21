@@ -3,6 +3,8 @@ Create database phpMyAdmin
 Copy Folder to C:\xampp\htdocs
 Open Link : http://localhost/datatable_json
 
+-------------------------------------------------------------------------------------------------------------
+
 1. How to create Table "department" in database phpMyAdmin
 Code 
 CREATE TABLE department (
@@ -39,6 +41,8 @@ INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('6','
 INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('7','Thomas ','O'Connor','1');
 INSERT INTO employee (employee_id,firstname,lastname,department_id) VALUES('8','Lam','Williams','4');
 
+-------------------------------------------------------------------------------------------------------------
+
 3.Join Table 1: department with Table 2: employee using a LEFT JOIN. Use data from the department table as the primary source, 
 and SELECT the specified fields. Use CONCAT to combine firstname and lastname into a single column.
 Code
@@ -49,5 +53,7 @@ SELECT
 FROM department 
 LEFT JOIN employee
 ON employee.department_id = department.department_id;
+
+-------------------------------------------------------------------------------------------------------------
 
 Note : This PHP code connects to a database, performs a SQL query, converts the retrieved data into JSON format, and outputs the result using echo.
